@@ -89,6 +89,43 @@
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
+				<executions>
+					<execution>
+						<id>runtime</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<phase>package</phase>
+						<configuration>
+							<classifier>core</classifier>
+							<excludes>
+								<exclude>**/*Aspect*</exclude>
+								<exclude>META-INF/aop.xml</exclude>
+							</excludes>
+						</configuration>
+					</execution>
+					<execution>
+						<id>aop-only</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<phase>package</phase>
+						<configuration>
+							<classifier>aop-only</classifier>
+							<includes>
+								<include>**/*Aspect*</include>
+								<include>META-INF/aop.xml</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
+
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>2.5.3</version>
 				<configuration>

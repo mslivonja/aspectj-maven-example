@@ -19,5 +19,5 @@ mvn package assembly:single
 ```
 mvn clean package
 cd target
-java -javaagent:lib/aspectjweaver-1.8.5.jar -cp aspect-maven-example-0.1-SNAPSHOT.jar li.barlog.asjex.App
+java -javaagent:lib/aspectjweaver-1.8.5.jar -cp "aspectj-maven-example-0.1-SNAPSHOT-core.jar;aspectj-maven-example-0.1-SNAPSHOT-aop-only.jar" li.barlog.asjex.App
 ```
