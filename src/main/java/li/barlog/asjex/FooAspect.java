@@ -5,7 +5,7 @@ import org.aspectj.lang.annotation.*;
 
 @Aspect
 public class FooAspect {
-	@Pointcut("execution(* li.barlog.asjex.Foo.foo(..))")
+	@Pointcut("execution(* li.barlog.asjex..*(..))")
 	public void methodFooFromTypeFoo() {}
 
 	@Before("methodFooFromTypeFoo()")
