@@ -14,3 +14,10 @@ mvn compile exec:exec
 ```
 mvn package assembly:single
 ```
+
+### Run jar from command-line ###
+```
+mvn clean package
+cd target
+java -javaagent:lib/aspectjweaver-1.8.5.jar -cp aspect-maven-example-0.1-SNAPSHOT.jar li.barlog.asjex.App
+```
