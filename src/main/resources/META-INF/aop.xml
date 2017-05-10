@@ -3,5 +3,5 @@
 	<aspects>
 		<aspect name="li.barlog.asjex.FooAspect"/>
 	</aspects>
-	<!--<weaver options="-showWeaveInfo -debug -verbose"/>-->
+	<weaver options="-showWeaveInfo -debug -verbose"/>
 </aspectj>
